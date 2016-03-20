@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :edit]
   before_action :find_book
   before_action :find_review, only: [:edit, :update, :destroy]
 
