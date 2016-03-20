@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319043555) do
+ActiveRecord::Schema.define(version: 20160319224505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 20160319043555) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "category_id"
+    t.string   "book_img_file_name"
+    t.string   "book_img_content_type"
+    t.integer  "book_img_file_size"
+    t.datetime "book_img_updated_at"
   end
 
   create_table "categories", force: true do |t|
