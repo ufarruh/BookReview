@@ -1,6 +1,15 @@
 BookReview::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.paperclip_defaults = {
+  storage: s3:,
+  s3_credentials: {
+    bucket: ENV.fetch('AWS_BUCKET'),
+    access_key_id: ENV.fetch('AWS_ACCESS_KEY'),
+    secret_access_key: ENV.fetch('AWS_SECRET_KEY'),
+    s3_region: ENV.fetch('AWS_REGION'),
+  }
+}
   # Code is not reloaded between requests.
   config.cache_classes = true
 

@@ -12,6 +12,10 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
+gem "figaro"
+
+gem 'aws-sdk', '~> 2.3'
+
 gem 'paperclip', '~> 4.3'
 
 gem 'simple_form', '~> 3.2'
@@ -27,4 +31,3 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   gem 'sdoc', require: false
 end
-
